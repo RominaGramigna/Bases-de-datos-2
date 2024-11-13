@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Kiosco</title>
+</head>
+<body>
+    <h2>MySQL</h2>
+    <section class="form-sect">
+        <h3>FORMULARIO DE PRODUCTOS</h3>
+        <form class="product-form" id="product-form">
+            <div class="form-field">
+                <label for="search">Buscar producto: </label>
+                <input type="text" name="search" id="search" placeholder="Nombre del producto...">
+            </div>
+            <div class="form-field">
+                <label for="product-id">ID del producto: </label>
+                <input type="number" name="product-id" id="product-id">
+            </div>
+            <div class="form-field">
+                <label for="product-name">Nombre del producto: </label>
+                <input type="text" name="product-name" id="product-name">
+            </div>
+            <div class="form-field">
+                <label for="product-category">Categoría: </label>
+                <select name="product-category" id="product-category"></select>
+            </div>
+            <div class="form-field">
+                <label for="product-price">Precio del producto: </label>
+                <input type="number" name="product-price" id="product-price">
+            </div>
+            <div class="form-field">
+                <label for="product-quant">Cantidad: </label>
+                <input type="number" name="product-quant" id="product-quant">
+            </div>
+        </form>
+        <div class="actions">
+                <button id="save" onclick="guardarDatos()">Guardar</button>
+                <button id="edit" onclick="botonModificar()">Modificar</button>
+                <button id="del" onclick="borrarDatos(document.getElementById('product-id').value)">Borrar</button>
+                <button id="add" onclick="botonAgregar()">Agregar</button>
+            </div>
+    </section>
+
+    <section class="visualize">
+        <div class="results">
+            <ul class="product-list" id="product-list">
+
+            </ul>
+        </div>
+    </section>
+</body>
+<script src="JS/index.js"></script>
+</html>
